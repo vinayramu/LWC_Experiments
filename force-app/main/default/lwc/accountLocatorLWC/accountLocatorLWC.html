@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item size="12" medium-device-size="12" padding="around-small">
+                <div class="slds-box slds-theme_default">
+                    <lightning-card title="Account Search" icon-name="standard:search">
+                        <div class="slds-form slds-p-around_x-small">
+                            <lightning-input label="Search" variant="label-hidden" value={searchTerm}
+                                placeholder="Search by name, phone, website or address" onchange={onSearchTermChange}>
+                            </lightning-input>
+                        </div>
+                    </lightning-card>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" medium-device-size="6" padding="around-small">
+                <div class="slds-box slds-theme_default">
+                    <lightning-card title="Accounts List" icon-name="standard:account">
+                        <lightning-datatable data={accounts.data} columns={cols} key-field="Id"
+                            hide-checkbox-column="true" show-row-number-column="true" onrowaction={onRowAction}>
+                        </lightning-datatable>
+                    </lightning-card>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" medium-device-size="6" padding="around-small">
+                <div class="slds-box slds-theme_default">
+                    Account Map Comes here
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

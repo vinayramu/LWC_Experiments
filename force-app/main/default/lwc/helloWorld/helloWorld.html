@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+        <div class="sldx-m-around_medium">
+            <p>Hello {firstName}, {greeting}!</p>
+            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+            <lightning-input name='firstName' value={firstName} label="First Name" onchange={handleChange}>
+            </lightning-input>
+            <lightning-input name='lastName' value={lastName} label="Last Name" onchange={handleChange}>
+            </lightning-input>
+            <p class="slds-m-top_medium">Uppercased Full Name: {uppercasedFullName}</p>
+        </div>
+    </lightning-card>
+</template>
